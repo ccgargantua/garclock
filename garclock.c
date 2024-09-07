@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <time.h>
-#include <string.h>
 #include <stdlib.h>
 #include <signal.h>
 
@@ -337,12 +336,14 @@ void print_ascii_string(char *src_buffer,  size_t src_buffer_size)
                 printf("%s", ascii_space[i]);
                 break;
             default:
-            return;
+                return;
             }
         }
+
         printf("\n");
     }
-        printf("\n");
+
+    printf("\n");
 }
 
 
