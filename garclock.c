@@ -176,7 +176,7 @@ void reset_cursor(void);
 void get_time_string(char *buffer, size_t buffer_size);
 void get_date_string(char *buffer, size_t buffer_size);
 void print_ascii_string(char *src_buffer,  size_t src_buffer_size);
-void handle_signal(int sig);
+void handle_signal();
 
 
 
@@ -289,7 +289,7 @@ void print_ascii_string(char *src_buffer,  size_t src_buffer_size)
 {
     for (int i = 0; i < 10; i++)
     {
-        for (int j = 0; j < src_buffer_size; j++)
+        for (size_t j = 0; j < src_buffer_size; j++)
         {
             switch (src_buffer[j])
             {
@@ -346,7 +346,7 @@ void print_ascii_string(char *src_buffer,  size_t src_buffer_size)
 
 
 
-void handle_signal(int sig)
+void handle_signal()
 {
     reset_cursor();
     printf("\033[2J\033[?25h"); //  clear screen, enable cursor
