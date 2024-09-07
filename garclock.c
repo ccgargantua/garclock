@@ -7,6 +7,7 @@
 
 #ifdef _WIN32
     #include <windows.h>
+    #warning "This software has barely been tested on windows. There is no guarantee that it will work."
 #elif defined(__unix__)
     #include <sys/time.h>
 #else
@@ -336,7 +337,7 @@ void print_ascii_string(char *src_buffer,  size_t src_buffer_size)
                 printf("%s", ascii_space[i]);
                 break;
             default:
-                return;
+            return;
             }
         }
         printf("\n");
