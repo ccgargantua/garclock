@@ -193,7 +193,7 @@ int main(void)
         DWORD dwMode = 0;
         if (!GetConsoleMode(hOut, &dwMode)) return 1;
 
-        dwMode |= 0x0004;
+        dwMode |= 0x0004; // ANSI flag
 
         if (!SetConsoleMode(hOut, dwMode)) return 1;
 
