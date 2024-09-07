@@ -8,10 +8,8 @@
 #ifdef _WIN32
     #include <windows.h>
     #warning "This software has barely been tested on windows. There is no guarantee that it will work."
-#elif defined(unix) || defined(__unix__) || defined(__unix)
-    #include <sys/time.h>
 #else
-    #warning "Only written to support windows and unix-like systems."
+    #include <sys/time.h>
 #endif
 
 
