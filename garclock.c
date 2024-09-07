@@ -233,6 +233,7 @@ int main(void)
         print_ascii_string(date_buffer, 10);
 
         fflush(stdout);
+        sleep(0.001);
     }
 
 
