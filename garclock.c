@@ -8,7 +8,7 @@
 #ifdef _WIN32
     #include <windows.h>
     #warning "This software has barely been tested on windows. There is no guarantee that it will work."
-#elif defined(__unix__)
+#elif defined(unix) || defined(__unix__) || defined(__unix)
     #include <sys/time.h>
 #else
     #warning "Only written to support windows and unix-like systems."
@@ -233,7 +233,6 @@ int main(void)
         print_ascii_string(date_buffer, 10);
 
         fflush(stdout);
-        sleep(0.001);
     }
 
 
