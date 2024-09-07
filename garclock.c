@@ -2,13 +2,13 @@
 #include <time.h>
 #include <string.h>
 #include <stdlib.h>
+#include <signal.h>
 
 
 #ifdef _WIN32
     #include <windows.h>
 #elif defined(__unix__)
     #include <sys/time.h>
-    #include <signal.h>
 #else
     #warning "Only written to support windows and unix-like systems."
 #endif
@@ -192,7 +192,7 @@ int main(void)
         DWORD dwMode = 0;
         if (!GetConsoleMode(hOut, &dwMode)) return 1;
 
-        dwMode |= ENABLE_VIRTUAL_TERMINAL_PROCESSING;
+        dwMode |= 0x0004;
 
         if (!SetConsoleMode(hOut, dwMode)) return 1;
 
