@@ -1,4 +1,7 @@
 # garclock
+
+![Alt Text](./demo.gif)
+
 A terminal-based clock utility. Made for a small casual competition.
 
 
